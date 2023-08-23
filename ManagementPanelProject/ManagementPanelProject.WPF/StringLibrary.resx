@@ -144,6 +144,9 @@
   <data name="EmailFormatError" xml:space="preserve">
     <value>Hatalı e-posta formatı.</value>
   </data>
+  <data name="ExperienceYear" xml:space="preserve">
+    <value>Çalışma Deneyimi(yıl)</value>
+  </data>
   <data name="Login" xml:space="preserve">
     <value>Giriş</value>
   </data>
@@ -167,6 +170,9 @@
   </data>
   <data name="OnlyStringValue" xml:space="preserve">
     <value>alanı sadece karakter içermelidir.</value>
+  </data>
+  <data name="OwnAccount" xml:space="preserve">
+    <value>Hesabım</value>
   </data>
   <data name="Password" xml:space="preserve">
     <value>Şifre</value>

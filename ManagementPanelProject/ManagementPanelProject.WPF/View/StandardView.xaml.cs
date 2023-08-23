@@ -29,6 +29,7 @@ namespace ManagementPanelProject.WPF.View
             InitializeComponent();
             UserPanel.Text = StringLibrary.Welcome + " - " + userName;
             getAllUsers();
+            btUserAcc.Content = StringLibrary.OwnAccount;
         }
         
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)

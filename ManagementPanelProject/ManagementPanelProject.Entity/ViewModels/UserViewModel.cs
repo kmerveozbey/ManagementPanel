@@ -30,13 +30,16 @@ namespace ManagementPanelProject.Entity.ViewModels
         public string? Phone { get; set; }
 
         [Display(Name = "Birthday")]
-        public DateTime? Birthday { get; set; }
+        public string? Birthday { get; set; }
 
         [Display(Name = "School")]
         public string? School { get; set; }
 
         [Display(Name = "Age")]
         public int Age { get; set; }
+
+        [Display(Name = "ExperienceYear")]
+        public int? ExperienceYear { get; set; }
 
     }
 }

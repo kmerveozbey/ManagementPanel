@@ -43,5 +43,11 @@ namespace ManagementPanelProject.Entity.Models
 
         [Display(Name = "School")]
         public string? School { get; set; }
+
+
+        [Display(Name = "ExperienceYear")]
+        public int? ExperienceYear { get; set; }
+
+
     }
 }

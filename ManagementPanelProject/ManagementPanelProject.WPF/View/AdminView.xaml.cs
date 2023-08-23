@@ -174,7 +174,8 @@ namespace ManagementPanelProject.WPF.View
             {
                 listGrid.ItemsSource = null;
                 Methods getUsers = new Methods();     
-                listGrid.ItemsSource = getUsers.getUsers(); 
+                listGrid.ItemsSource = getUsers.getUsers();
+               
             }
             catch (Exception ex)
             {

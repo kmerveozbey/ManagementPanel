@@ -102,6 +102,7 @@ namespace ManagementPanelProject.WPF
                         Phone = user.Phone,
                         Password = md5Password,
                         School = user.School,
+                        ExperienceYear = user.ExperienceYear,
                     };
                     var userResult = context.Users.Add(newUser);
                     context.SaveChanges();
@@ -173,7 +174,7 @@ namespace ManagementPanelProject.WPF
                     Name = user.Name,
                     Surname = user.Surname,
                     Email = user.Email,
-                    Birthday = user.Birthday,
+                    Birthday = Convert.ToDateTime(user.Birthday).ToShortDateString(),
                     Phone = user.Phone,
                     School = user.School,
                 };

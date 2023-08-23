@@ -91,6 +91,7 @@ namespace ManagementPanelProject.WPF.View
                         Phone = txtPhone.Text.ToString(),
                         Password = txtPass.Password.ToString(),
                         School = txtSchool.Text,
+                        ExperienceYear = Convert.ToInt32(txtExperienceYear.Text.ToString()),
                     };
                     Methods userAdd = new Methods();
                     userAdd.addUser(newUser, role.RoleName);
@@ -142,6 +143,7 @@ namespace ManagementPanelProject.WPF.View
                 lblSchool.Text = StringLibrary.School;
                 lblSurname.Text = StringLibrary.Surname;
                 btnSave.Content = StringLibrary.Save;
+                lblExperienceYear.Text = StringLibrary.ExperienceYear;
                 txtAdd.Text = StringLibrary.NewRecord.ToUpper();
             }
             catch (Exception ex)

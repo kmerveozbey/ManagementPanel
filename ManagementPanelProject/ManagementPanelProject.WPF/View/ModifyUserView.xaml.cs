@@ -85,7 +85,9 @@ namespace ManagementPanelProject.WPF.View
                     user.Birthday = Convert.ToDateTime(dtBirthDay.Text);
                     user.Phone = txtPhone.Text;
                     user.School = txtSchool.Text;
-                    if(!String.IsNullOrEmpty(txtPass.Password) || txtPass.Password.ToString() != "" )
+                    user.ExperienceYear = Convert.ToInt32(txtExperienceYear.Text.ToString());
+                    
+                    if (!String.IsNullOrEmpty(txtPass.Password) || txtPass.Password.ToString() != "" )
                     {
                         var md5Password = ProcessForPassword.MD5Hash(txtPass.Password);
                         user.Password = md5Password;
@@ -135,7 +137,8 @@ namespace ManagementPanelProject.WPF.View
                 lblName.Text = StringLibrary.Name;
                 lblSchool.Text = StringLibrary.School;
                 lblSurname.Text = StringLibrary.Surname;
-                btnUpdate.Content = StringLibrary.Update;
+                lblExperienceYear.Text = StringLibrary.ExperienceYear;
+                btnUpdate.Content = StringLibrary.Update.ToUpper();
                 txtModify.Text = StringLibrary.Modify;
             }
             catch (Exception ex)

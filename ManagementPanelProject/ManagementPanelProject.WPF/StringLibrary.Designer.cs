@@ -142,6 +142,15 @@ namespace ManagementPanelProject.WPF {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Çalışma Deneyimi(yıl).
+        /// </summary>
+        public static string ExperienceYear {
+            get {
+                return ResourceManager.GetString("ExperienceYear", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Giriş.
         /// </summary>
         public static string Login {
@@ -210,6 +219,15 @@ namespace ManagementPanelProject.WPF {
         public static string OnlyStringValue {
             get {
                 return ResourceManager.GetString("OnlyStringValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hesabım.
+        /// </summary>
+        public static string OwnAccount {
+            get {
+                return ResourceManager.GetString("OwnAccount", resourceCulture);
             }
         }
         
