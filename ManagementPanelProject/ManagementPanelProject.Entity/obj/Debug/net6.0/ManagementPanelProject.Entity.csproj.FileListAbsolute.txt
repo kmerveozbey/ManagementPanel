@@ -1,0 +1,14 @@
+C:\Git\ManagementPanelProject\ManagementPanelProject.Entity\bin\Debug\net6.0\ManagementPanelProject.Entity.deps.json
+C:\Git\ManagementPanelProject\ManagementPanelProject.Entity\bin\Debug\net6.0\ManagementPanelProject.Entity.runtimeconfig.json
+C:\Git\ManagementPanelProject\ManagementPanelProject.Entity\bin\Debug\net6.0\ManagementPanelProject.Entity.dll
+C:\Git\ManagementPanelProject\ManagementPanelProject.Entity\bin\Debug\net6.0\ManagementPanelProject.Entity.pdb
+C:\Git\ManagementPanelProject\ManagementPanelProject.Entity\obj\Debug\net6.0\ManagementPanelProject.Entity.csproj.AssemblyReference.cache
+C:\Git\ManagementPanelProject\ManagementPanelProject.Entity\obj\Debug\net6.0\ManagementPanelProject.Entity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Git\ManagementPanelProject\ManagementPanelProject.Entity\obj\Debug\net6.0\ManagementPanelProject.Entity.AssemblyInfoInputs.cache
+C:\Git\ManagementPanelProject\ManagementPanelProject.Entity\obj\Debug\net6.0\ManagementPanelProject.Entity.AssemblyInfo.cs
+C:\Git\ManagementPanelProject\ManagementPanelProject.Entity\obj\Debug\net6.0\ManagementPanelProject.Entity.csproj.CoreCompileInputs.cache
+C:\Git\ManagementPanelProject\ManagementPanelProject.Entity\obj\Debug\net6.0\ManagementPanelProject.Entity.dll
+C:\Git\ManagementPanelProject\ManagementPanelProject.Entity\obj\Debug\net6.0\refint\ManagementPanelProject.Entity.dll
+C:\Git\ManagementPanelProject\ManagementPanelProject.Entity\obj\Debug\net6.0\ManagementPanelProject.Entity.pdb
+C:\Git\ManagementPanelProject\ManagementPanelProject.Entity\obj\Debug\net6.0\ManagementPanelProject.Entity.genruntimeconfig.cache
+C:\Git\ManagementPanelProject\ManagementPanelProject.Entity\obj\Debug\net6.0\ref\ManagementPanelProject.Entity.dll

@@ -1,0 +1,17 @@
+C:\Git\ManagementPanelProject\ManagementPanelProject.DAL\bin\Debug\net6.0\ManagementPanelProject.DAL.deps.json
+C:\Git\ManagementPanelProject\ManagementPanelProject.DAL\bin\Debug\net6.0\ManagementPanelProject.DAL.runtimeconfig.json
+C:\Git\ManagementPanelProject\ManagementPanelProject.DAL\bin\Debug\net6.0\ManagementPanelProject.DAL.dll
+C:\Git\ManagementPanelProject\ManagementPanelProject.DAL\bin\Debug\net6.0\ManagementPanelProject.DAL.pdb
+C:\Git\ManagementPanelProject\ManagementPanelProject.DAL\bin\Debug\net6.0\ManagementPanelProject.Entity.dll
+C:\Git\ManagementPanelProject\ManagementPanelProject.DAL\bin\Debug\net6.0\ManagementPanelProject.Entity.pdb
+C:\Git\ManagementPanelProject\ManagementPanelProject.DAL\obj\Debug\net6.0\ManagementPanelProject.DAL.csproj.AssemblyReference.cache
+C:\Git\ManagementPanelProject\ManagementPanelProject.DAL\obj\Debug\net6.0\ManagementPanelProject.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Git\ManagementPanelProject\ManagementPanelProject.DAL\obj\Debug\net6.0\ManagementPanelProject.DAL.AssemblyInfoInputs.cache
+C:\Git\ManagementPanelProject\ManagementPanelProject.DAL\obj\Debug\net6.0\ManagementPanelProject.DAL.AssemblyInfo.cs
+C:\Git\ManagementPanelProject\ManagementPanelProject.DAL\obj\Debug\net6.0\ManagementPanelProject.DAL.csproj.CoreCompileInputs.cache
+C:\Git\ManagementPanelProject\ManagementPanelProject.DAL\obj\Debug\net6.0\ManagementPanelProject.DAL.csproj.CopyComplete
+C:\Git\ManagementPanelProject\ManagementPanelProject.DAL\obj\Debug\net6.0\ManagementPanelProject.DAL.dll
+C:\Git\ManagementPanelProject\ManagementPanelProject.DAL\obj\Debug\net6.0\refint\ManagementPanelProject.DAL.dll
+C:\Git\ManagementPanelProject\ManagementPanelProject.DAL\obj\Debug\net6.0\ManagementPanelProject.DAL.pdb
+C:\Git\ManagementPanelProject\ManagementPanelProject.DAL\obj\Debug\net6.0\ManagementPanelProject.DAL.genruntimeconfig.cache
+C:\Git\ManagementPanelProject\ManagementPanelProject.DAL\obj\Debug\net6.0\ref\ManagementPanelProject.DAL.dll
