@@ -151,6 +151,15 @@ namespace ManagementPanelProject.WPF {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Çalışma deneyim yılı sayı olmalıdır..
+        /// </summary>
+        public static string ExperienceYearError {
+            get {
+                return ResourceManager.GetString("ExperienceYearError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Giriş.
         /// </summary>
         public static string Login {

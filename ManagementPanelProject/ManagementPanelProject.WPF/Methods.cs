@@ -94,6 +94,7 @@ namespace ManagementPanelProject.WPF
                 {
                     UserModel newUser = new UserModel()
                     {
+                        ActiveUser = user.ActiveUser,
                         UserName = user.UserName,
                         Name = user.Name,
                         Surname = user.Surname,
@@ -117,7 +118,7 @@ namespace ManagementPanelProject.WPF
                             UserRoleUserName = user.UserName,
                             UserRoleRoleName = userRoleName,
                         };
-                        newUserRole.User = context.Users.Where(x => x.UserName == user.UserName).FirstOrDefault();
+                        newUserRole.User = context.Users.Where(x => x.UserName == user.UserName && x.ActiveUser == true).FirstOrDefault();
                         newUserRole.Role = context.Roles.Where(x => x.RoleName == userRoleName).FirstOrDefault();
                         var userRoleResult = context.UserRole.Add(newUserRole);
                         context.SaveChanges();
@@ -150,6 +151,7 @@ namespace ManagementPanelProject.WPF
                     Phone = "05332152321",
                     Password = "admin",
                     School = "",
+                    ActiveUser = true,
                 };
                 addUser(newUser, "administrator");
                 #endregion User Add End
@@ -162,7 +164,7 @@ namespace ManagementPanelProject.WPF
 
         public List<UserViewModel> getUsers()
         {
-            var userModels = context.Users.ToList();
+            var userModels = context.Users.Where(x=>x.ActiveUser == true).ToList();
             List<UserViewModel> users = new List<UserViewModel>();
 
             //yeni view ile ekrana belirli değerler yazılsın.
@@ -212,8 +214,8 @@ namespace ManagementPanelProject.WPF
                 }
                 else if (type.ToLower() == "number")
                 {
-                    Regex regexPhone = new Regex("^[a-zA-Z]*$");
-                    isStatus = !regexPhone.IsMatch(text);
+                    Regex regexPhone = new Regex("^[0-9]*$");
+                    isStatus = regexPhone.IsMatch(text);
                 }
                 else if (type.ToLower() == "string")
                 {

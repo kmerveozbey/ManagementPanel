@@ -29,6 +29,10 @@ namespace ManagementPanelProject.Entity.Models
         [DataType(DataType.Password)]
         public string Password { get; set; }
 
+        [Required]
+        [Display(Name = "ActiveUser")]
+        public Boolean ActiveUser { get; set; }
+
         [EmailAddress]
         [Display(Name = "Email")]
         public string? Email { get; set; }

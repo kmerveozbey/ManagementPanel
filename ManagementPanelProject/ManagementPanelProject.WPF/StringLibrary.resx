@@ -147,6 +147,9 @@
   <data name="ExperienceYear" xml:space="preserve">
     <value>Çalışma Deneyimi(yıl)</value>
   </data>
+  <data name="ExperienceYearError" xml:space="preserve">
+    <value>Çalışma deneyim yılı sayı olmalıdır.</value>
+  </data>
   <data name="Login" xml:space="preserve">
     <value>Giriş</value>
   </data>

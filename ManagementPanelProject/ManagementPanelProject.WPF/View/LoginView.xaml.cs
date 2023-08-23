@@ -77,7 +77,7 @@ namespace ManagementPanelProject.WPF.View
                 if (!String.IsNullOrEmpty(txtUser.Text))
                 {
                     Methods activityLogUpdateMethod = new Methods();
-                    var userName = context.Users.Where(x => x.UserName == txtUser.Text).FirstOrDefault();
+                    var userName = context.Users.Where(x => x.UserName == txtUser.Text && x.ActiveUser == true).FirstOrDefault();
                     if (userName != null)
                         activityLogUpdateMethod.activityLogUpdate(userName.UserName);
                 }
@@ -102,11 +102,11 @@ namespace ManagementPanelProject.WPF.View
                         UserName = txtUser.Text,
                     };
                     var md5Password = ProcessForPassword.MD5Hash(txtPass.Password.ToString());
-                    var user = context.Users.Where(x => x.UserName == txtUser.Text).FirstOrDefault();
+                    var user = context.Users.Where(x => x.UserName == txtUser.Text && x.ActiveUser == true).FirstOrDefault();
 
                     if (user != null && user.Password == md5Password)
                     {
-                        var userName = context.Users.Where(x => x.UserName == txtUser.Text && x.Password == md5Password).FirstOrDefault();
+                        var userName = context.Users.Where(x => x.UserName == txtUser.Text && x.ActiveUser == true && x.Password == md5Password).FirstOrDefault();
                         if (userName != null)
                         {
                             var isLoginStatus = context.LoginActivityList.Where(x => x.UserName == userName.UserName && x.LoginIsActive == true).FirstOrDefault();

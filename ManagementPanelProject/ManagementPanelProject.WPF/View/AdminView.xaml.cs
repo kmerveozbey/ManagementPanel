@@ -130,12 +130,14 @@ namespace ManagementPanelProject.WPF.View
                     MessageBoxResult result = MessageBox.Show(getuserName.UserName + StringLibrary.DeleteRequestMessage, StringLibrary.DeleteUserApproval, MessageBoxButton.YesNo, MessageBoxImage.Question);
                     if (result == MessageBoxResult.Yes)
                     {
-                        var user = context.Users.Where(x => x.UserName == getuserName.UserName).FirstOrDefault();
+                        var user = context.Users.Where(x => x.UserName == getuserName.UserName && x.ActiveUser == true).FirstOrDefault();
                         if (user != null)
                         {
-                            context.Users.Remove(user);
+                            user.ActiveUser = false;
+                            context.Users.Update(user);
                             context.SaveChanges();
                             getAllUsers();
+                            MessageBox.Show(StringLibrary.Success);
                         }
                     }
                 }

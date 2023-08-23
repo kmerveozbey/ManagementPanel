@@ -70,6 +70,9 @@ namespace ManagementPanelProject.DAL.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("nvarchar(450)");
 
+                    b.Property<bool>("ActiveUser")
+                        .HasColumnType("bit");
+
                     b.Property<DateTime?>("Birthday")
                         .HasColumnType("datetime2");
 

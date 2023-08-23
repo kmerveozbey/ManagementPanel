@@ -118,6 +118,7 @@ namespace ManagementPanelProject.WPF.View
                     txtPhone.Text = user.Phone;
                     txtSchool.Text = user.School;
                     dtBirthDay.Text = user.Birthday.ToString();
+                    txtExperienceYear.Text  = user.ExperienceYear.ToString();
                 }
             }
             catch (Exception ex)
@@ -206,7 +207,15 @@ namespace ManagementPanelProject.WPF.View
                         return false;
                     }
                 }
-
+                if (!string.IsNullOrEmpty(txtExperienceYear.Text))
+                {
+                    bool experienceYearRegexControl = validateMethod.regexControl(txtExperienceYear.Text, "number");
+                    if (experienceYearRegexControl == false)
+                    {
+                        MessageBox.Show(StringLibrary.ExperienceYearError);
+                        return false;
+                    }
+                }
                 return status;
             }
             catch (Exception ex)

@@ -77,7 +77,7 @@ namespace ManagementPanelProject.WPF.View
                 if (!validateControl()) return;
 
                 var md5Password = ProcessForPassword.MD5Hash(txtPass.Password.ToString());
-                var user = context.Users.Where(x => x.UserName == txtUser.Text && x.Password == md5Password).FirstOrDefault();
+                var user = context.Users.Where(x => x.UserName == txtUser.Text).FirstOrDefault();
                 var role = context.Roles.Where(x => x.RoleName == cmbRole.SelectedItem.ToString()).FirstOrDefault();
                 if (user == null && role != null)
                 {
@@ -92,12 +92,33 @@ namespace ManagementPanelProject.WPF.View
                         Password = txtPass.Password.ToString(),
                         School = txtSchool.Text,
                         ExperienceYear = Convert.ToInt32(txtExperienceYear.Text.ToString()),
+                        ActiveUser = true,
                     };
                     Methods userAdd = new Methods();
                     userAdd.addUser(newUser, role.RoleName);
                     MessageBox.Show(StringLibrary.Success);
                 }
-                else if (user != null)
+                else if (user != null && user.ActiveUser == false)
+                {
+
+                    user.Name = txtName.Text;
+                    user.Surname = txtSurname.Text;
+                    user.Email = txtEmail.Text;
+                    user.Birthday = Convert.ToDateTime(dtBirthDay.Text);
+                    user.Phone = txtPhone.Text;
+                    user.School = txtSchool.Text;
+                    user.ExperienceYear = Convert.ToInt32(txtExperienceYear.Text.ToString());
+                    user.ActiveUser = true;
+                    if (!String.IsNullOrEmpty(txtPass.Password) || txtPass.Password.ToString() != "")
+                    {
+                        md5Password = ProcessForPassword.MD5Hash(txtPass.Password);
+                        user.Password = md5Password;
+                    }
+                    var result = context.Users.Update(user);
+                    context.SaveChanges();
+                    MessageBox.Show(StringLibrary.Success);
+                }
+                else if (user != null && user.ActiveUser == true)
                 {
                     MessageBox.Show(StringLibrary.AlreadyExist);
 
@@ -163,7 +184,7 @@ namespace ManagementPanelProject.WPF.View
 
                 Boolean userNameControl = validateMethod.validateForm(txtUser.Text, lblUsername.Text);
                 if (userNameControl == false) return false;
-                
+
 
                 Boolean nameControl = validateMethod.validateForm(txtName.Text, lblName.Text);
                 if (nameControl == false) return false;
@@ -212,6 +233,16 @@ namespace ManagementPanelProject.WPF.View
                     if (phoneRegexControl == false)
                     {
                         MessageBox.Show(StringLibrary.PhoneFormatError);
+                        return false;
+                    }
+                }
+
+                if (!string.IsNullOrEmpty(txtExperienceYear.Text))
+                {
+                    bool experienceYearRegexControl = validateMethod.regexControl(txtExperienceYear.Text, "number");
+                    if (experienceYearRegexControl == false)
+                    {
+                        MessageBox.Show(StringLibrary.ExperienceYearError);
                         return false;
                     }
                 }
